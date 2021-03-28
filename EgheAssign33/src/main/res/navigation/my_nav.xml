@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/egheFragment">
+
+    <fragment
+        android:id="@+id/egheFragment"
+        android:name="eghe.iyobosa.n01107171.EgheFragment"
+        android:label="fragment_eghe"
+        tools:layout="@layout/fragment_eghe" />
+    <fragment
+        android:id="@+id/iyobosaFragment"
+        android:name="eghe.iyobosa.n01107171.IyobosaFragment"
+        android:label="fragment_iyobosa"
+        tools:layout="@layout/fragment_iyobosa" />
+    <fragment
+        android:id="@+id/n01107171Fragment"
+        android:name="eghe.iyobosa.n01107171.N01107171Fragment"
+        android:label="fragment_n01107171"
+        tools:layout="@layout/fragment_n01107171" />
+</navigation>
