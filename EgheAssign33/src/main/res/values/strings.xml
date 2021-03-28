@@ -3,6 +3,13 @@
     <string name="text_label_1">Tab1</string>
     <string name="text_label_2">Tab2</string>
     <string name="text_label_3">Tab3</string>
+    <string name="sml">Small</string>
+    <string name="med">Medium</string>
+    <string name="brush">Brush</string>
+    <string name="erase">Erase</string>
+    <string name="paint">Paint</string>
+    <string name="lrg">Large</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

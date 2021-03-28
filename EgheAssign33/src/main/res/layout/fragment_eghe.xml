@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EgheFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".EgheFragment"
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tab1" />
+        android:layout_height="50dp"
+        android:text="Eghe Iyobosa N01107171"
+        android:textSize="24dp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/new_btn"
+            android:contentDescription="Start Now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/draw_btn"
+            android:contentDescription="@string/brush"
+            android:src="@drawable/ic_baseline_brush_24"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:id="@+id/erase_btn"
+            android:contentDescription="@string/erase"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/paintColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/black"
+                android:layout_margin="2dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:backgroundTint="@color/black"
 
-</FrameLayout>
+                android:contentDescription="black"
+                android:tag="@color/black"
+                />
+            <ImageButton
+                android:id="@+id/teal"
+                android:layout_margin="2dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="teal"
+                android:backgroundTint="@color/teal_200"
+                />
+            <ImageButton
+
+                android:id="@+id/blue"
+                android:layout_margin="2dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="purple"
+                android:backgroundTint="@color/purple_700"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <eghe.iyobosa.n01107171.CanvasView
+        android:id="@+id/signature_canvas"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:textColor="#FFFFFF" />
+    <!-- TODO: Update blank fragment layout -->
+
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 package eghe.iyobosa.n01107171;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,11 +58,55 @@ public class EgheFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    private CanvasView customCanvas;
+    ImageButton currpaint, drawwbtn, erase, newbtn, black , teal , blue;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_eghe, container, false);
+        View view = inflater.inflate(R.layout.fragment_eghe, container, false);
+        customCanvas = (CanvasView) view.findViewById(R.id.signature_canvas);
+        LinearLayout paintLayout = (LinearLayout)view.findViewById(R.id.paintColor);
+        drawwbtn = view.findViewById(R.id.draw_btn);
+        newbtn = view.findViewById(R.id.new_btn);
+        erase = view.findViewById(R.id.erase_btn);
+        blue = view.findViewById(R.id.blue);
+        black = view.findViewById(R.id.black);
+        teal = view.findViewById(R.id.teal);
+
+        drawwbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customCanvas.setupDrawing();
+            }
+        });
+        erase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customCanvas.setErase(true);
+            }
+        });
+        black.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customCanvas.setColor("#000000");
+            }
+        });
+        blue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customCanvas.setColor("#f1f1f1");
+            }
+        });
+        teal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customCanvas.setColor("#f100f1");
+            }
+        });
+        CanvasView canvasView;
+
+        return view;
     }
+
 }
